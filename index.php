@@ -61,7 +61,7 @@ endif;
   </div>
   <div class="form-group">
     <label for="inputContent" class="control-label" >Content</label>
-    <textarea class="form-control" id="inputContent" rows="6" name="content" <?php echo $_POST['content']?>></textarea>
+    <textarea class="form-control" id="inputContent" rows="6" name="content" value="<?php echo $_POST['content']?>"></textarea>
   </div>
 
   <div class="form-group">
