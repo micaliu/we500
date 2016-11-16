@@ -18,8 +18,8 @@ if (!empty($_POST)):
     $to      = "micahliu153@gmail.com";
     $subject = "Contact from " . $_POST["email"];
     $message = "Name: " . $_POST["name"];
-    $message = "\nEmail: " . $_POST["email"];
-    $message = "\nContent: " . $_POST["content"];
+    $message .= "\nEmail: " . $_POST["email"];
+    $message .= "\nContent: " . $_POST["content"];
     $headers = "From: " . $_POST["email"] . "\r\n" . "Reply-To: " . $_POST["email"] . "\r\n";
     mail($to, $subject, $message, $headers);
 
@@ -61,7 +61,7 @@ endif;
   </div>
   <div class="form-group">
     <label for="inputContent" class="control-label" >Content</label>
-    <textarea class="form-control" id="inputContent" rows="6" name="content" value="<?php echo $_POST['content']?>"></textarea>
+    <textarea class="form-control" id="inputContent" rows="6" name="content"> <?php echo $_POST['content']?> </textarea>
   </div>
 
   <div class="form-group">
