@@ -10,6 +10,7 @@
                   <th>Image</th>
                   <th>Position</th>
                   <th>Status</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -18,9 +19,10 @@
                   <td><?php echo $work['id']?></td>
                   <td><?php echo $work['name']?></td>
                   <td><?php echo $work['link']?></td>
-                  <td><img src="<?php echo $work['coverimage']?>" width="100" /></td>
+                  <td><img src="<?php echo (strpos($work["coverimage"],"://")===false)?BASEURL."assets/ugc/".$work["coverimage"]:$work["coverimage"]?>" width="100" /></td>
                   <td><?php echo $work['position']?></td>
                   <td><?php echo $work['status'] ==1 ? "Enabled":"Disabled"?></td>
+                  <td><a href="<?php echo BASEURL?>delete.php?id=<?php echo $work["id"]?>" onclick="return confirm('are you sure to delete this record?')"> Delete</a></td>
                 </tr>
                 <?php endforeach;?>
               </tbody>
