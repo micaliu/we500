@@ -8,7 +8,7 @@ class paginate{
      private $sort_by;
      private $total_no_of_records = null;
      
-     function __construct(PDO $DB_con,$select,$sort_by=null,$records_per_page=10){
+     function __construct(PDO $DB_con,$select,$sort_by=null,$records_per_page=5){
          $this->db = $DB_con;
          $this->records_per_page = $records_per_page;
          $this->select = $select;

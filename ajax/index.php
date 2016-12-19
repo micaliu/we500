@@ -45,7 +45,7 @@ $pagination = new paginate($db,"SELECT * FROM news","created_at desc");
 		</div>
      	<ul>
      		<?php foreach ($pagination->dataRows() as $news):?>
-     			<li><a href="detail.php?nid=<?php echo $news["id"]?>"><?php echo $news["title"]?></a></li>
+     			<li><a href="detail-ajax-with-form.php?nid=<?php echo $news["id"]?>"><?php echo $news["title"]?></a></li>
      		<?php endforeach;?>
      	</ul>
      	
