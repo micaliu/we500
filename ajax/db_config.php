@@ -7,3 +7,4 @@ try{
 	echo $exception->getMessage();
 	die();
 }
+ini_set('display_errors',1);
